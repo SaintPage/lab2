@@ -1,3 +1,5 @@
+////Ángel de Jesús Mérida Jiménez Carné:23661
+// Programa de tener cursos y salones por separados y poder asignarlos entre si
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,28 +8,14 @@ import com.opencsv.CSVReader;
 
 /*
  * para compilar:
- *  javac -cp commons-lang3-3.13.0.jar:opencsv-5.8.jar:. Main.java
+ * javac -cp ".;./lib/commons-lang3-3.13.0.jar;./lib/opencsv-5.8.jar" Main.java Curso.java Dia.java Salon.java 
  * para correr:
- *  java -cp opencsv-5.8.jar:commons-lang3-3.13.0.jar:. Main 
- * System.out.println("Hola");
-        try{
-            
-            CSVReader csvReader = new CSVReader(new FileReader("./salones.csv"));
-
-            String[] fila = null;
-            while( (fila = csvReader.readNext()) != null ){
-                System.out.println(fila[0]+"|"+ fila[1] +"|"+ fila[2] +"|"+ fila[3] +"|"+ fila[4]);
-            }
-
-        }
-        catch(Exception e){
-            System.out.println("error");
-            e.printStackTrace();
-        }
+ *  java -cp ".;opencsv-5.8.jar;commons-lang3-3.13.0.jar" Main 
  */
 public class Main{
     public static void main(String[] args){
         boolean salir = false;
+    
         ArrayList<Salon> salones = new ArrayList<Salon>();
         ArrayList<Curso> cursos = new ArrayList<Curso>();
         ArrayList<Curso> cursosAsignados = new ArrayList<Curso>();

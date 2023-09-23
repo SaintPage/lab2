@@ -1,3 +1,4 @@
+// Clase salon para almacenar los salones y mostrarlos en el main
 import java.util.ArrayList;
 
 public class Salon {
